@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: aitzazahsanpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aitzazahsanpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: aitzazahsanpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: aitzazahsanpipelinesjavascriptdocker 
+          image: visaforum.azurecr.io/aitzazahsanpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
